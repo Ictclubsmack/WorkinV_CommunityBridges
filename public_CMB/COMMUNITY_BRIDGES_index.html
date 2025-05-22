@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Bridges - Services & Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./Styles/COM-BRIDGES.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+   <header class="header bg-dark">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center py-3 header-content">
+
+      <!-- Logo and Text -->
+      <div class="d-flex align-items-center logo-container">
+        <img src="./assets/images/CB2_prev_ui.png" alt="Community Bridges" style="height: 60px;">
+        <h1 class="ms-2 mb-0 fs-4 text-white logo-text">Community Bridges</h1>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="d-none d-md-flex align-items-center gap-3 main-nav">
+        <a href="COMMUNITY_BRIDGES_index.html" class="text-white text-decoration-none">Home</a>
+        <a href="About_us.html" class="text-white text-decoration-none">About</a>
+        <a href="services.html" class="text-white text-decoration-none active">Our Services</a>
+        <a href="Contact_us.html" class="text-white text-decoration-none">Contacts</a>
+        <a href="/dashboard" class="text-white text-decoration-none">Go to Dashboard</a>
+
+        <a href="Sign_inCMB.html">
+          <button class="btn btn-outline-light login-btn">LOGIN</button>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="btn d-md-none mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars text-white fs-4"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobileMenu" class="d-md-none bg-dark text-center mt-2 p-3 rounded" style="display: none;">
+      <a href="COMMUNITY_BRIDGES_index.html" class="d-block text-white py-1 text-decoration-none">Home</a>
+      <a href="About_us.html" class="d-block text-white py-1 text-decoration-none">About</a>
+      <a href="services.html" class="d-block text-white py-1 text-decoration-none">Our Services</a>
+      <a href="Contact_us.html" class="d-block text-white py-1 text-decoration-none">Contacts</a>
+      <a href="Sign_inCMB.html">
+        <button class="btn btn-outline-light mt-2 login-btn">LOGIN</button>
+      </a>
+    </div>
+  </div>
+</header>
+
+   <!-- Hero Section -->
+<section class="hero-section d-flex align-items-center text-white" style="background: url('assets-for-services/banner-image.jpg') center center/cover no-repeat; min-height: 60vh; position: relative;">
+    <div class="overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
+
+    <div class="container text-center" style="position: relative; z-index: 2;">
+        <h1 class="display-4 fw-bold">Building Bridges for a Better Tomorrow</h1>
+        <p class="lead">Connecting NGOs, support groups, and communities to tackle food insecurity and foster collaboration across Uganda.</p>
+        <a href="#services" class="btn btn-outline-light mt-3">Explore Our Work</a>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Our Services</h2>
+                <p class="text-muted">Explore the areas we focus on to support communities</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Nutrition Education</h5>
+                            <p class="card-text">Providing communities with the knowledge to make healthy food choices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Agricultural Training</h5>
+                            <p class="card-text">Teaching sustainable farming techniques to improve yield and income.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">NGO Collaboration</h5>
+                            <p class="card-text">Partnering with organizations to maximize community impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Search NGO Section with Filters -->
+<section id="search-ngo" class="search-ngo-section">
+  <div class="container">
+    <h2 class="section-title text-center">Find Partner NGOs</h2>
+
+    <form class="search-filters-form" action="#" method="GET">
+      <div class="row justify-content-center">
+        <!-- Region -->
+        <div class="col-md-2 col-sm-6 mb-3">
+          <label for="region" class="form-label">Select Region</label>
+          <select id="region" name="region" class="form-control">
+            <option value="">None</option>
+            <option value="Central">Central</option>
+            <option value="West Nile">West Nile</option>
+            <option value="Western & South West">Western & South West</option>
+            <option value="Eastern">Eastern</option>
+            <option value="Northern & Karamoja">Northern & Karamoja</option>
+          </select>
+        </div>
+
+        <!-- Organization Type -->
+        <div class="col-md-2 col-sm-6 mb-3">
+          <label for="organization" class="form-label">Organization</label>
+          <select id="organization" name="organization" class="form-control">
+            <option value="">None</option>
+            <option value="NGOs">NGOs</option>
+            <option value="Foreign aid Counterparts">Foreign aid Counterparts</option>
+            <option value="Support Groups">Support Groups</option>
+          </select>
+        </div>
+
+        <!-- Scope -->
+        <div class="col-md-2 col-sm-6 mb-3">
+          <label for="scope" class="form-label">Scope</label>
+          <select id="scope" name="scope" class="form-control">
+            <option value="">Community-based</option>
+            <option value="Regional-based">Regional-based</option>
+            <option value="National-based">National-based</option>
+            <option value="Entity-based">Entity-based</option>
+          </select>
+        </div>
+
+        <!-- Project Status -->
+        <div class="col-md-2 col-sm-6 mb-3">
+          <label for="project" class="form-label">Projects</label>
+          <select id="project" name="project" class="form-control">
+            <option value="">Currently ongoing</option>
+            <option value="Finished">Finished</option>
+            <option value="Discontinued">Discontinued</option>
+            <option value="Pending">Pending</option>
+          </select>
+        </div>
+
+        <!-- Sector -->
+        <div class="col-md-2 col-sm-6 mb-3">
+          <label for="sector" class="form-label">Sector</label>
+          <select id="sector" name="sector" class="form-control">
+            <option value="">Universal</option>
+            <option value="Health">Health</option>
+            <option value="Environment">Environment</option>
+            <option value="Calamity">Calamity</option>
+          </select>
+        </div>
+
+        <!-- Search Button -->
+        <div class="col-md-2 col-sm-12 text-center align-self-end mb-3">
+          <button type="submit" class="btn btn-primary w-100">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+    <section id="featured-projects" class="featured-projects-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <p>Checkout <span>the</span> Projects</p>
+      <h2>Prospect Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Start of a Project Card -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/food-security/NorthernUGproj.jpg" alt="PRELNOR Project Image">
+        </div>
+        <div class="project-details">
+          <h3><a href="#">Project for Restoration of Livelihoods in the Northern Region</a></h3>
+          <div class="project-meta">
+            <span class="meta-chip">Region: Northern Uganda</span>
+            <span class="meta-chip">TimeScope: Current</span>
+            <span class="meta-chip">Budget: [Insert Budget]</span>
+          </div>
+          <p>[Summary of what they do]</p>
+        </div>
+      </div>
+      <!-- End of Project Card -->
+
+      <!-- Duplicate the project-card block and update for each project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/food-security/WatotoChildcareproj.jpg" alt="Watoto Child Care Ministries">
+        </div>
+        <div class="project-details">
+          <h3><a href="#">Watoto Child Care Ministries</a></h3>
+          <div class="project-meta">
+            <span class="meta-chip">Region: Nationwide</span>
+            <span class="meta-chip">TimeScope: Ongoing</span>
+            <span class="meta-chip">Budget: [Insert Budget]</span>
+          </div>
+          <p>[Summary of what they do]</p>
+        </div>
+      </div>
+      <!-- Duplicate the project-card block and update for each project -->
+     
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/food-security/wellsoflife.jpg" alt="Wells of Life">
+        </div>
+        <div class="project-details">
+          <h3><a href="#">Wells of Life</a></h3>
+          <div class="project-meta">
+            <span class="meta-chip">Region: Nationwide</span>
+            <span class="meta-chip">TimeScope: Ongoing</span>
+            <span class="meta-chip">Budget: [Insert Budget]</span>
+          </div>
+          <p>[Summary of what they do]</p>
+        </div>
+      </div><!-- Duplicate the project-card block and update for each project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/food-security/bidibidirefugeeproj.jpg" alt="Bidi Bidi Performing Arts Centre">
+        </div>
+        <div class="project-details">
+          <h3><a href="#">Bidi Bidi Performing Arts Centre</a></h3>
+          <div class="project-meta">
+            <span class="meta-chip">Region:West Nile</span>
+            <span class="meta-chip">TimeScope: Ongoing</span>
+            <span class="meta-chip">Budget: [Insert Budget]</span>
+          </div>
+          <p>[Summary of what they do]</p>
+        </div>
+      </div><!-- Duplicate the project-card block and update for each project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/food-security/Uganda Aids Comission.jpg" alt="Uganda AIDS Commission">
+        </div>
+        <div class="project-details">
+          <h3><a href="#">Uganda AIDS Commission</a></h3>
+          <div class="project-meta">
+            <span class="meta-chip">Region: Nationwide</span>
+            <span class="meta-chip">TimeScope: Ongoing</span>
+            <span class="meta-chip">Budget: [Insert Budget]</span>
+          </div>
+          <p>[Summary of what they do]</p>
+        </div>
+      </div><!-- Duplicate the project-card block and update for each project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/food-security/Atta Breastmilk.jpg" alt="ATTA">
+        </div>
+        <div class="project-details">
+          <h3><a href="#">ATTA Breastmilk Community</a></h3>
+          <div class="project-meta">
+            <span class="meta-chip">Region: Nationwide</span>
+            <span class="meta-chip">TimeScope: Ongoing</span>
+            <span class="meta-chip">Budget: [Insert Budget]</span>
+          </div>
+          <p>[Summary of what they do]</p>
+        </div>
+      </div><!-- Duplicate the project-card block and update for each project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/food-security/Habitat for Humanity.png" alt="Habitat">
+        </div>
+        <div class="project-details">
+          <h3><a href="#">Habitat for Humanity Uganda</a></h3>
+          <div class="project-meta">
+            <span class="meta-chip">Region:Central Uganda</span>
+            <span class="meta-chip">TimeScope: Ongoing</span>
+            <span class="meta-chip">Budget: [Insert Budget]</span>
+          </div>
+          <p>[Summary of what they do]</p>
+        </div>
+      </div><!-- Duplicate the project-card block and update for each project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/food-security/EntebbeSurg-hosp.jpg" alt="EntebbeSurgicalHospt">
+        </div>
+        <div class="project-details">
+          <h3><a href="#">Entebbe Children's Surgical Hospital</a></h3>
+          <div class="project-meta">
+            <span class="meta-chip">Region:Central Uganda Entebbe</span>
+            <span class="meta-chip">TimeScope: Ongoing</span>
+            <span class="meta-chip">Budget: [Insert Budget]</span>
+          </div>
+          <p>[Summary of what they do]</p>
+        </div>
+      </div>
+
+      <!-- Add more .project-card blocks here for each additional project -->
+
+    </div>
+  </div>
+</section>
+  <!-- Mode of operation-->
+    <section id="mode-of-operation" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Mode of Operation</h2>
+      <p class="text-muted">How we work to create lasting impact in communities</p>
+    </div>
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="bi bi-people-fill fs-2 text-primary"></i>
+            </div>
+            <h5 class="card-title">Community Engagement</h5>
+            <p class="card-text">We actively listen to community needs and co-design solutions with local stakeholders.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="bi bi-handshake fs-2 text-success"></i>
+            </div>
+            <h5 class="card-title">Partnership Building</h5>
+            <p class="card-text">We form strategic partnerships with NGOs, government agencies, and funders.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="bi bi-gear-wide-connected fs-2 text-warning"></i>
+            </div>
+            <h5 class="card-title">Project Implementation</h5>
+            <p class="card-text">We execute scalable and sustainable initiatives aligned with our mission.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="bi bi-bar-chart-line-fill fs-2 text-danger"></i>
+            </div>
+            <h5 class="card-title">Monitoring & Evaluation</h5>
+            <p class="card-text">We measure impact and refine strategies to improve community outcomes.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--Get Involved section-->
+       <section class="py-5 bg-white" id="get-involved">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Get Involved</h2>
+      <p class="text-muted">Be a part of the impact. Choose how you want to contribute to our mission.</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Donate -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-cash-coin fs-1 text-success mb-3"></i>
+            <h5 class="card-title">Donate</h5>
+            <p class="card-text">Support our programs by making a one-time or recurring donation.</p>
+            <a href="#donate" class="btn btn-success">Donate Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volunteer -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-people-fill fs-1 text-primary mb-3"></i>
+            <h5 class="card-title">Volunteer</h5>
+            <p class="card-text">Join our team on the ground or online and help bring change directly to communities.</p>
+            <a href="#volunteer" class="btn btn-primary">Join Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partner with Us -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-link-45deg fs-1 text-warning mb-3"></i>
+            <h5 class="card-title">Partner</h5>
+            <p class="card-text">Collaborate with us on impactful projects through funding, expertise, or shared goals.</p>
+            <a href="#partner" class="btn btn-warning text-white">Partner With Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+           <!-- Brand Section Start -->
+<section id="brand" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Partners & Brands</h2>
+    <div class="row justify-content-center align-items-center g-4">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <a href="#">
+          <img src="./assets/images/Brand2 web/Sdgs.png" class="img-fluid d-block mx-auto" alt="SDGs Logo">
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <a href="#">
+          <img src="./assets/images/Brand2 web/End-World-Hunger.jpg" class="img-fluid d-block mx-auto" alt="End World Hunger Logo">
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <a href="#">
+          <img src="./assets/images/Brand2 web/NGO.jpg" class="img-fluid d-block mx-auto" alt="NGO Logo">
+        </a>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <a href="#">
+          <img src="./assets/images/Brand2 web/UgCourtofArms.jpg" class="img-fluid d-block mx-auto" alt="Uganda Court of Arms Logo">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Brand Section End -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h2>Get In Touch</h2>
+            <p class="mb-4">We'd love to hear from you. Reach out for collaborations or inquiries.</p>
+            <a href="mailto:info@communitybridges.org" class="btn btn-primary">Email Us</a>
+        </div>
+    </section>
+
+   <footer class="site-footer">
+  <div class="container">
+    
+    <!-- Copyright & Credit -->
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+      <p class="mb-0 text-muted">
+        &copy; 2025 Community Bridges. Designed and developed by 
+         
+        <a href="#" target="_blank" rel="noopener">SMACK-TRICONA Team</a>.
+      </p>
+
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#" aria-label="Behance"><i class="fa fa-behance"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <div id="scroll-Top">
+    <button class="return-to-top" aria-label="Back to top" title="Back to top">
+      <i class="fa fa-angle-up" id="scroll-top"></i>
+    </button>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  // Toggle mobile menu
+  document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+    const menu = document.getElementById('mobileMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  });
+</script>
+</body>
+
+</html>

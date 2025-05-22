@@ -1,0 +1,26 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 250px; /* sidebar width */
+  background-color: #f9f9f9; /* optional */
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 100%; /* Remove max-width limits if any */
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 70px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,148 @@
+/* Full height layout for main dashboard page */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem 2rem;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2e4d3c;
+}
+
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Responsive layout on larger screens */
+@media (min-width: 768px) {
+  .dashboard-sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.section-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3a3a3a;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 0.5rem;
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+/*add ons for better mobile experience*/
+/* Mobile-friendly text sizes and spacing */
+@media (max-width: 600px) {
+  .dashboard-header {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .section-card {
+    padding: 1rem;
+  }
+
+  .project-selector select {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .project-table th,
+  .project-table td {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .dashboard-container {
+    padding: 1rem;
+  }
+}
+
+/* Timeline section full width */
+.timeline-section {
+  grid-column: 1 / -1;
+}
+
+/* Center chart elements */
+.centered-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.project-selector {
+  margin-bottom: 1.5rem;
+}
+
+.project-selector select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.project-table th,
+.project-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.project-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.project-table tr:hover {
+  background-color: #fafafa;
+}
+
+/* Utility */
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.fullscreen {
+  height: 100%;
+  width: 100%;
+}

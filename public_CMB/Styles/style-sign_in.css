@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../assets/images/hero-bg.jpg") center/cover no-repeat;
+  padding: 20px;
+  position: relative;
+}
+
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #ccc;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  top: 0;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.terms input {
+  accent-color: #fff;
+}
+
+.terms a {
+  color: #4e4ffa;
+  text-decoration: underline;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  padding: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.register {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.register a {
+  color: #4e4ffa;
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field input.error {
+  border-bottom: 2px solid #ff6b6b;
+}
+
+.input-field .error-message {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+  text-align: left;
+}

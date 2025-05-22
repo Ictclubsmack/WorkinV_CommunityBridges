@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CommunityBridges - Sign Up</title>
+  
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./Styles/style-sign_in.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+    <form action="/api/auth/register" method="POST" novalidate>
+      <h2>Sign Up</h2>
+
+      <div class="input-field">
+  <input type="text" id="username" required>
+  <label>Enter your username</label>
+  <span class="error-message"></span>
+</div>
+
+<div class="input-field">
+  <input type="email" id="email" required>
+  <label>Enter your email</label>
+  <span class="error-message"></span>
+</div>
+
+<div class="input-field">
+  <input type="password" id="password" required>
+  <label>Create password</label>
+  <span class="error-message"></span>
+</div>
+
+<div class="input-field">
+  <input type="password" id="confirm_password" required>
+  <label>Confirm password</label>
+  <span class="error-message"></span>
+</div>
+
+<div class="forget">
+  <label for="terms">
+    <input type="checkbox" id="terms" required>
+    <p>I agree to the <a href="#">terms & conditions</a></p>
+  </label>
+  <span class="error-message" id="terms-error"></span>
+</div>
+
+      <button type="submit">Create Account</button>
+
+      <p class="register">
+        Already have an account? <a href="Sign_inCMB.html">Login here</a>
+      </p>
+    </form>
+  </div>
+  <script src="./Js/sign_up.js"></script>
+</body>
+</html>
